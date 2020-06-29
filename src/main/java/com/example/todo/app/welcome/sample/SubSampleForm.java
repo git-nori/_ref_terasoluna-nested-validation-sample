@@ -15,7 +15,7 @@ public class SubSampleForm implements Serializable {
     private String sizeSubSampleStrB;
 
 //    @Digits(integer = 4, fraction = 0, groups= {ValidGroup.B.class})
-    @Digits(integer = 4, fraction = 0, groups= {Default.class, B.class})
+    @Digits(integer = 4, fraction = 0)
     private BigDecimal digitsSubSampleNumDef;
 
     public String getSizeSubSampleStrB() {

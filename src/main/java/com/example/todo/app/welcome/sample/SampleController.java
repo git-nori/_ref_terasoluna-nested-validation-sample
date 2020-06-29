@@ -45,7 +45,7 @@ public class SampleController {
     @PostMapping("/hand")
     @ResponseBody
     public Object postHand(SampleForm form, BindingResult result) {
-        ((SmartValidator)validator).validate(form, result, B.class);
+        ((SmartValidator)validator).validate(form, result, B.class, Default.class);
         System.out.println(result.getFieldErrors());
         return result.getFieldErrors();
     }
