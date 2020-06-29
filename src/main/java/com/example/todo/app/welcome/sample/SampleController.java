@@ -49,4 +49,11 @@ public class SampleController {
         System.out.println(result.getFieldErrors());
         return result.getFieldErrors();
     }
+
+    @PostMapping("/def")
+    @ResponseBody
+    public Object postDef(@Validated SampleForm form, BindingResult result) {
+        System.out.println(result.getFieldErrors());
+        return result.getFieldErrors();
+    }
 }

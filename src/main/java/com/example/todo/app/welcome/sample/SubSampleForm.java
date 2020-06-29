@@ -11,11 +11,11 @@ import com.fasterxml.jackson.databind.ser.std.StdKeySerializers.Default;
 
 public class SubSampleForm implements Serializable {
 
-    @Size(min = 2, groups= {B.class})
+    @Size(min = 2, groups= {Default.class, B.class})
     private String sizeSubSampleStrB;
 
 //    @Digits(integer = 4, fraction = 0, groups= {ValidGroup.B.class})
-    @Digits(integer = 4, fraction = 0, groups= {Default.class})
+    @Digits(integer = 4, fraction = 0, groups= {Default.class, B.class})
     private BigDecimal digitsSubSampleNumDef;
 
     public String getSizeSubSampleStrB() {
